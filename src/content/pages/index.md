@@ -1,11 +1,16 @@
 ---
 template: index-page
 slug: /
-title: Wyatt Morriss
-tagline: Graphic Designer
+title: Justine Gagnepain
+tagline: Applications Developer
 featuredImage: /assets/toa-heftiba-0rlfirsdvzu-unsplash.jpg
 cta:
   ctaText: Know more
   ctaLink: /about
 ---
-He is a award winning gaming graphic designer, based in sunny side of California. Working as Principal designer at Bethesda
+
+Javascript, Node.js, Typescript, React, Redux, Gatsby, Electron,
+GraphQL, Vue.js, SASS/SCSS,
+GSAP/GreenSock, CSS animations,
+Three.js, Express, Websockets,
+MySQL, MongoDB, Firebase
