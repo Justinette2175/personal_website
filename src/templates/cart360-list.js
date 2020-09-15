@@ -10,7 +10,7 @@ export const blogListQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { frontmatter: { type: { eq: "blog" } } }
+      filter: { frontmatter: { type: { eq: "cart360" } } }
       limit: $limit
       skip: $skip
     ) {
@@ -76,7 +76,7 @@ class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const { currentPage, numPages } = this.props.pageContext
-    const blogSlug = "/blog/"
+    const blogSlug = "/cart360/"
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
     const prevPage =

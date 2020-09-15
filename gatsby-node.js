@@ -6,12 +6,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   //const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const blogList = path.resolve(`./src/templates/blog-list.js`)
+  const cart360List = path.resolve(`./src/templates/cart360-list.js`)
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ) {
+      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
         edges {
           node {
             id
@@ -35,6 +34,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Create markdown pages
   const posts = result.data.allMarkdownRemark.edges
   let blogPostsCount = 0
+  let cart360Count = 0
 
   posts.forEach((post, index) => {
     const id = post.node.id
@@ -55,28 +55,46 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
 
     // Count blog posts.
-    if (post.node.frontmatter.template === 'blog-post') {
+    if (post.node.frontmatter.type === "blog") {
       blogPostsCount++
+    }
+
+    // Count CART360 posts.
+    if (post.node.frontmatter.type === "cart360") {
+      cart360Count++
     }
   })
 
   // Create blog-list pages
-  const postsPerPage = 9
-  const numPages = Math.ceil(blogPostsCount / postsPerPage)
+  const postsPerPage = 12
+  const numBlogPages = Math.ceil(blogPostsCount / postsPerPage)
+  const numCart360Pages = Math.ceil(cart360Count / postsPerPage)
 
-  Array.from({ length: numPages }).forEach((_, i) => {
+  Array.from({ length: numBlogPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
       component: blogList,
       context: {
         limit: postsPerPage,
         skip: i * postsPerPage,
-        numPages,
+        numBlogPages,
         currentPage: i + 1,
       },
     })
   })
 
+  Array.from({ length: numCart360Pagess }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/cart360` : `/cart360/${i + 1}`,
+      component: cart360List,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numCart360Pages,
+        currentPage: i + 1,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
