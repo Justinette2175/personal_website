@@ -31,6 +31,12 @@ collections:
           widget: "hidden",
           default: "blog-post",
         }
+      - {
+          label: "Collection",
+          name: "collection",
+          widget: "hidden",
+          default: "blog",
+        }
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
           label: "Slug",
@@ -62,12 +68,12 @@ collections:
           hint: "Main content goes here.",
         }
 
-  - name: "projects" # Used in routes, ie.: /admin/collections/:slug/edit
-    label: "Projects" # Used in the UI
-    label_singular: "Project" # Used in the UI, ie: "New Post"
+  - name: "cart360" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Cart360" # Used in the UI
+    label_singular: "Cart360" # Used in the UI, ie: "New Post"
     description: >
       Create awesome content here.
-    folder: "src/content/posts"
+    folder: "src/content/cart360"
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     summary: "{{title}} — {{year}}/{{month}}/{{day}}"
     create: true # Allow users to create new documents in this collection
@@ -77,6 +83,12 @@ collections:
           name: "template",
           widget: "hidden",
           default: "blog-post",
+        }
+      - {
+          label: "Collection",
+          name: "collection",
+          widget: "hidden",
+          default: "cart360",
         }
       - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
@@ -111,16 +123,6 @@ collections:
   - label: "Pages"
     name: "pages"
     files:
-      - label: "Projects"
-        name: "projects"
-        file: "src/content/pages/projects.md"
-        fields:
-          - {
-              label: "Template",
-              name: "template",
-              widget: "hidden",
-              default: "projects-page",
-            }
       - label: "Home"
         name: "home"
         file: "src/content/pages/index.md"
