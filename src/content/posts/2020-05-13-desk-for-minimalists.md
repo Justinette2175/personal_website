@@ -1,6 +1,6 @@
 ---
 template: blog-post
-type: blog
+collection: blog
 title: Desk for minimalists
 slug: /minimalists-desk
 date: 2020-05-13 12:46

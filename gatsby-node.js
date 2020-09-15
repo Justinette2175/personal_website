@@ -18,6 +18,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               slug
               template
               title
+              collection
             }
           }
         }
@@ -55,12 +56,12 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
 
     // Count blog posts.
-    if (post.node.frontmatter.type === "blog") {
+    if (post.node.frontmatter.collection === "blog") {
       blogPostsCount++
     }
 
     // Count CART360 posts.
-    if (post.node.frontmatter.type === "cart360") {
+    if (post.node.frontmatter.collection === "cart360") {
       cart360Count++
     }
   })
@@ -70,6 +71,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const numBlogPages = Math.ceil(blogPostsCount / postsPerPage)
   const numCart360Pages = Math.ceil(cart360Count / postsPerPage)
 
+  console.log("NUMBER OF  BLOG PAGES", numBlogPages)
   Array.from({ length: numBlogPages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/blog` : `/blog/${i + 1}`,
@@ -83,7 +85,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
-  Array.from({ length: numCart360Pagess }).forEach((_, i) => {
+  Array.from({ length: numCart360Pages }).forEach((_, i) => {
     createPage({
       path: i === 0 ? `/cart360` : `/cart360/${i + 1}`,
       component: cart360List,

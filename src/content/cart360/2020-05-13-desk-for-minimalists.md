@@ -1,6 +1,6 @@
 ---
 template: blog-post
-type: cart360
+collection: cart360
 title: Desk for minimalists
 slug: /minimalists-desk
 date: 2020-05-13 12:46
