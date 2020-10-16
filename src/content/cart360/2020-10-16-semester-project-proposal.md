@@ -2,7 +2,7 @@
 template: blog-post
 collection: cart360
 title: Semester Project Proposal
-slug: project-proposal
+slug: /project-proposal
 date: 2020-10-15 23:29
 description: Semester project proposal
 ---
