@@ -5,6 +5,7 @@ title: Semester Project Proposal
 slug: /project-proposal
 date: 2020-10-15 23:29
 description: Semester project proposal
+featuredImage: /assets/capture-d’écran-le-2020-10-16-à-10.42.27.png
 ---
 # Research questions
 
