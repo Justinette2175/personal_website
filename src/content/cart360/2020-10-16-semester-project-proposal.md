@@ -7,8 +7,11 @@ date: 2020-10-15 23:29
 description: Semester project proposal
 ---
 # Research questions
+
 ## Background and environment 
+
 #### Think of a context and an environment where you would like to intervene. Where will you present your project? Who is it made for?
+
  The project attempts to simplify the process of building habits towards achieving desired personal goals by easing out aspects of friction we experience around doing activities that we would like to engage in, but sometimes find hard to get started on.  
 
 The artifact is thought out for individuals who have meaningful long-term goals that could be reachable through repetitive practice, but who struggle to commit to daily engagement in the practice.
@@ -22,6 +25,7 @@ I observed my own aversions to adopting daily habits that would enable me to ach
  For example, in order to achieve my goal of not experiencing back pain, I must diligently comply with the exercise program prescribed by my physiotherapist, consisting of series of stretches and strengthening exercises to be performed every day. However, as much as I consciously want to follow through, and as high as is the goal-led incentive to comply with the program, I often either forget to practice, or I don’t have the motivation to overcome the multitude of steps I need to engage in before I even start training: Opening my email to find the link towards a web application which I need to scroll through to see which exercises have been assigned, navigating in and out of the app to set timers of different lengths for each stretch, keeping track of the number of repetitions I am performing, fetching necessary accessories like tennis balls, yoga mats, and stretch bands, etc.  We aim for the artifact to remove the need for any kind of conscious thought and decision-making from the user. Most likely presented in a user’s home, it will serve to provide a cue for a habit, guidance as users complete the desired routine, and a reward, for the sole purpose of helping the house’s occupants to build strong habits. 
 
 ##  User interaction and relationship
+
 ####  Think about the kind of relationship you wish to foster among and between your users and the artifact or installation. What will your project afford users and how would the experience make them reflect on themselves, their environment, society and your intentions? 
 
 In designing the interaction, I am inspired by the work of David Rose as outlined in « Enchanted Objects ». Non-negotiable aspects of the design include having a single purpose, not being intrusive and being brutally simple. It will not require that the user learns a new skill or adopts a new habit to start using it. In addition, the artifact will not convey judgement on the user about not having completed tasks or ask them for regular commitment to using it.
@@ -35,7 +39,9 @@ The essential meaning I hope to covey with this experience is that we are harder
  When I feel like I’m late or running after things, I feel anxious. But ironically, much of anxiety relieving technology involves committing to yet another activity, and feeling yet again disappointed with ourselves when we fail: tracking our emotions in a journal, starting a meditation program, exercising more, eating more healthy, reaching out to friends, are yet more things we need to convince ourselves to do - use our limited reserve of willpower for, in order to stop feeling anxious. Instead, the artifact will serve to take care of the user, much like  a thermostat will regulate the temperature automatically in a house. Effectively, it allows the user to stop thinking about the list of things they need to do, and simply plug in to the interface for a while, follow step by step instructions, and know that if they thoughtlessly follow what the machine asks of them for a known amount of time, they will reach their goals without it taking so much effort.  
 
 ## Potential for empowerment 
+
 #### Think about the notion of empowerment. Is your artifact really helping or challenging users or is it just another psychological prosthesis? 
+
 I don’t believe physiological prosthetics aren’t intrinsically bad. Some of us have poor memory, while others suffer from chronic and sometimes debilitating emotional and mental diseases. If technology can afford the human mind some support in ways similar to how anti-depressants, anti-psychotics, and mood stabilizers do, and if our goal is to maximize human well-being, then we should support the development of effective and accessible psychological prosthetics.  
 
 However, because this artifact is inspired by scientific research around making habits automatic, part of the evaluation of its success will revolve around determining whether long-term users can eventually stop using the device and maintain the habit as effortlessly as they did when they were using it. The research seems to suggest that a primitive part of our brain, separate from the processes we think have to do with accomplishing goals like willpower and memory, governs our habits. In order to minimize the amount of active processing that our brains need to do, we store information for and act out habits in a subconscious part of our brain which automates out actions without us having to think about it. The hope is that this artifact can not only facilitate achieving goals while we are using it, but also engrain in us the habits we want to engage in so they become automatic. 
@@ -45,6 +51,7 @@ However, because this artifact is inspired by scientific research around making 
  In response, I would argue that free will paradoxically can take away some of our freedom. Too much choice leads to choice paralysis, doubt, and lack of commitment. This artifact plays into user’s already existing goals and empowers them in two ways: by making goals easier to achieve and by putting an end to the mistaken belief that we are the problem and that if we just tried hard enough we could get stuff done.  
 
 ## Interaction design strategies 
+
 #### Think about how to successfully communicate your intentions - what Interaction Design Strategies will you employ? What are you trying to tell us?
 
 The overarching question that I will keep in mind through the design process is the following: « How can I use my understanding of how habits work to help people easily work towards their goals without giving up? »
@@ -54,23 +61,31 @@ The overarching question that I will keep in mind through the design process is 
 I would like to use metaphor cards with interviewees to get a better sense of the emotions and feelings they associate with habits and long-term goals, in order to guide my design of the personality of the artifact.  I will need to make analog rapid prototypes to test individual stages of interaction. 
 
 Questions I intend to target through prototyping include:  
-- What cue in an environment could be both visible and non-intrusive? Would it be light, movement, facial features, etc? 
-- During the routine, how can the artifact convey duration or repetitions?
-- How should the artifact dispense instructions without disrupting the user’s routine? 
-- What are possible reward mechanisms, and which would be most effective? 
-- How can I convey the artifact’s personality through its form and function?
+
+* What cue in an environment could be both visible and non-intrusive? Would it be light, movement, facial features, etc? 
+* During the routine, how can the artifact convey duration or repetitions?
+* How should the artifact dispense instructions without disrupting the user’s routine? 
+* What are possible reward mechanisms, and which would be most effective? 
+* How can I convey the artifact’s personality through its form and function?
 
  As this project has a lot of moving pieces, I will work incrementally, diluting the experience to its simple form and eventually building a series of progressively more interactive MVPs. This will require that I narrow down what the essence of the artifact is. 
 
 #  Initial technical evaluation
-- The cue. An intuitive, fast, non-intrusive indicator of whether the task has been completed already. I would like to experiment with different interfaces, most likely visual to not be intrusive. It could be lighting in the form of LEDS or indicators moving with motors or servo-motors 
-- The routine assistant. Guides users through their routine step-by-step while providing  directions. It is important that users are able to complete the routine while following instructions, without interruption. An initial prototype could use LEDS to display steps, and speakers to speak out directions. Another solution would be to use an LCD screen. A pico-projector could eventually project images for instructions. 
-- The confirmation mechanism. If a routine contains multiple steps, the user needs to be able to let the device know that they are done with one step and can move to the next. This could be achieved through voice activation and therefore require a voice input. It could also be achieved through buttons, or gesture detection with a camera.
-- The reward. A quick review of the scientific literature on the link between reward and motivation did not allow me to confirm whether explicit tangible and non-tangible rewards (sweets, beverages, the right to engage in a specific activity, points, badges, etc) are more motivating than implicit rewards (positive feelings) or whether they lead to decreased motivation. I would like to test this hypothesis by creating a prototype that incorporates a lock box that unlocks when the user completes the routine. This would require motor actuators for the lock box. Another prototype could incorporate a camera taking short videos of the user performing the habit so they can see a motivating retrospective 
-- Loading routines. Initial prototypes will come with a pre-loaded routine. However, in a full-fledge product users should be able to create their own routine with a cloud-based software. This will require that the program be connected to the cloud to receive updates.  
+
+* The cue. An intuitive, fast, non-intrusive indicator of whether the task has been completed already. I would like to experiment with different interfaces, most likely visual to not be intrusive. It could be lighting in the form of LEDS or indicators moving with motors or servo-motors 
+* The routine assistant. Guides users through their routine step-by-step while providing  directions. It is important that users are able to complete the routine while following instructions, without interruption. An initial prototype could use LEDS to display steps, and speakers to speak out directions. Another solution would be to use an LCD screen. A pico-projector could eventually project images for instructions. 
+* The confirmation mechanism. If a routine contains multiple steps, the user needs to be able to let the device know that they are done with one step and can move to the next. This could be achieved through voice activation and therefore require a voice input. It could also be achieved through buttons, or gesture detection with a camera.
+* The reward. A quick review of the scientific literature on the link between reward and motivation did not allow me to confirm whether explicit tangible and non-tangible rewards (sweets, beverages, the right to engage in a specific activity, points, badges, etc) are more motivating than implicit rewards (positive feelings) or whether they lead to decreased motivation. I would like to test this hypothesis by creating a prototype that incorporates a lock box that unlocks when the user completes the routine. This would require motor actuators for the lock box. Another prototype could incorporate a camera taking short videos of the user performing the habit so they can see a motivating retrospective 
+* Loading routines. Initial prototypes will come with a pre-loaded routine. However, in a full-fledge product users should be able to create their own routine with a cloud-based software. This will require that the program be connected to the cloud to receive updates.  
+
+# Interaction storyboard
+
+![Interaction storyboard](/assets/capture-d’écran-le-2020-10-16-à-10.42.27.png "Interaction storyboard")
 
 # Survey of existing related projects 
+
 ## Digital habit trackers 
+
 Seeing the hundreds of habit trackers available in the Apple store makes it obvious just how much we want to hold ourselves accountable to our self-development commitments, and perhaps also exemplifies the intense neuroticism and anxiety so common around habits. Each mobile application has a particular approach to habit tracking. 
 
  With Habitify, users set up habit goals, enter whether they succeeded in completing the activity each day, and are rewarded with compelling graphs outlining their trends, completion percentages and streaks. It relies entirely on implicit rewards like noticing progress and looking back on performance to cement habits.
@@ -86,6 +101,7 @@ Some applications provide cues in the form of notifications throughout the day s
 As for tracking compliance, most applications require users to track completion themselves, but a few support integration with devices like smart watches, smart sneakers, and door cameras, as well as other software like GitHub, Instagram, or your phone’s operating system. These integrations are limited and require a bit of creativity to use, but to me they are indispensable because without them, one has to make tracking into a habit in itself before getting anywhere. 
 
 ##  Analog trackers: the bullet journal 
+
 I might have what the software industry has in recent years coined « App fatigue ». It makes me tired just thinking about having to turn on my phone so many times a day and I am starting to grow an aversion towards using apps at all. So when I started thinking about habits, I used a  paper-format bullet journal to keep track of mine.
 
  A bullet journal is a standard notebook in which users keep lists for all aspects of their lives and follow templates shared online by other bullet journalists. It is usually visually appealing, clean, and follows a color or icon code throughout. The journal keeps track of anything. There is a template tracking mood over a year, in which you draw a matrix on one of the pages with as many squares as days in the year, and each day, you color one of the squares either red, yellow, or green, to indicate how you felt. There are templates for listing friend’s birthdays, groceries and todo items, templates for weekly, monthly, and yearly calendars, and of course, for tracking habits.  
@@ -109,14 +125,15 @@ There exists skills that assist users continuously as they perform a routine. Fo
   Also, not all information can be conveyed through voice. It can be a slow and unintuitive way to interact, as demonstrated by the google home listing all of the ingredients to make a chili one at a time in a robotic voice. 
 
 ## Coaches
- While not a project or alternative per se, some companies like coach.me offer habit building and tracking services. They will call you for cues, guide you through routines - I just want to stop running - No one more mile you got this! - and make you accountable. I see two downsides to this approach. 
 
- One is that it might be effective, but it’s also pricey, and therefore not accessible. 
+ While not a project or alternative per se, some companies like coach.me offer habit building and tracking services. They will call you for cues, guide you through routines - I just want to stop running - No one more mile you got this! - and make you accountable. Humans being versatile and able to provide all aspects of the habit loop, coaches can be very effective. I see two downsides to this approach. 
 
+ One is that it is pricey, therefore not accessible. 
 
-The other is that humans perceive other humans as a lot more judgmental than machines. I am in my late twenties and somehow I still feel guilty when I show up to violin class not having rehearsed enough. I can’t imagine wanting to burden myself with more social guilt, and I don’t believe adults want other adults to judge their performance. 
+The other is that humans perceive other humans as a lot more judgmental than machines. I am in my late twenties and somehow I still feel guilty when I show up to violin class not having rehearsed enough. I don’t want to burden myself with more social guilt, and I don’t think adults want other adults to judge their performance. 
 
 #  Differentiators of the proposed artifact
+
  In creating the artifact, I aim to recognize and get inspiration from aspects of existing projects that make their user interaction effective and pleasant, while learning from their shortcomings to inspire more frictionless solutions. 
 
  Unlike software and applications, the artifact is a tangible object that doesn’t require to look at a screen. I will experiment with form and behaviors to draw an emotional and soft response from users.  
